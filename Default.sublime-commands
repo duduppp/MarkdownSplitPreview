@@ -1,0 +1,5 @@
+[
+	{ "caption": "Markdown Split: Preview (side by side)", "command": "mdp_split_preview" },
+	{ "caption": "Markdown Split: Preview in Browser", "command": "mdp_browser_preview" },
+	{ "caption": "Markdown Split: Quick Writing Panel", "command": "mdp_quick_write" }
+]

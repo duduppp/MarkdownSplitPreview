@@ -1,0 +1,33 @@
+[
+	{
+		"caption": "Markdown Split",
+		"mnemonic": "M",
+		"children": [
+			{ "caption": "Preview (side by side)", "command": "mdp_split_preview" },
+			{ "caption": "Preview in Browser", "command": "mdp_browser_preview" },
+			{ "caption": "Quick Writing Panel…", "command": "mdp_quick_write" },
+			{ "caption": "-" },
+			{ "caption": "Bold", "command": "mdp_format", "args": { "action": "bold" } },
+			{ "caption": "Italic", "command": "mdp_format", "args": { "action": "italic" } },
+			{ "caption": "Strikethrough", "command": "mdp_format", "args": { "action": "strike" } },
+			{ "caption": "Inline Code", "command": "mdp_format", "args": { "action": "code" } },
+			{ "caption": "-" },
+			{ "caption": "Heading 1", "command": "mdp_format", "args": { "action": "h1" } },
+			{ "caption": "Heading 2", "command": "mdp_format", "args": { "action": "h2" } },
+			{ "caption": "Heading 3", "command": "mdp_format", "args": { "action": "h3" } },
+			{ "caption": "-" },
+			{ "caption": "Bullet List", "command": "mdp_format", "args": { "action": "ul" } },
+			{ "caption": "Numbered List", "command": "mdp_format", "args": { "action": "ol" } },
+			{ "caption": "Task List", "command": "mdp_format", "args": { "action": "task" } },
+			{ "caption": "Blockquote", "command": "mdp_format", "args": { "action": "quote" } },
+			{ "caption": "-" },
+			{ "caption": "Code Block", "command": "mdp_format", "args": { "action": "codeblock" } },
+			{ "caption": "Table", "command": "mdp_format", "args": { "action": "table" } },
+			{ "caption": "Link", "command": "mdp_format", "args": { "action": "link" } },
+			{ "caption": "Image", "command": "mdp_format", "args": { "action": "image" } },
+			{ "caption": "Horizontal Rule", "command": "mdp_format", "args": { "action": "hr" } },
+			{ "caption": "-" },
+			{ "caption": "Insert Today's Date", "command": "mdp_format", "args": { "action": "date" } }
+		]
+	}
+]
