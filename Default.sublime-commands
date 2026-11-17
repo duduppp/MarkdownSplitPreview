@@ -1,5 +1,13 @@
 [
 	{ "caption": "Markdown Split: Preview (side by side)", "command": "mdp_split_preview" },
 	{ "caption": "Markdown Split: Preview in Browser", "command": "mdp_browser_preview" },
-	{ "caption": "Markdown Split: Quick Writing Panel", "command": "mdp_quick_write" }
+	{ "caption": "Markdown Split: Quick Writing Panel", "command": "mdp_quick_write" },
+	{
+		"caption": "Preferences: MarkdownSplitPreview Settings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/MarkdownSplitPreview/MarkdownSplitPreview.sublime-settings",
+			"default": "// Settings in here override those in \"Default/MarkdownSplitPreview.sublime-settings\"\n{\n\t$0\n}\n"
+		}
+	}
 ]
