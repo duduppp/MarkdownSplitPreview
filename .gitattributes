@@ -1,0 +1,3 @@
+# Exclude development-only files from the package installed by Package Control
+.gitattributes export-ignore
+.gitignore export-ignore
