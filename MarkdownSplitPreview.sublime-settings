@@ -1,4 +1,9 @@
 {
+	// Rendering engine: "auto" uses pandoc when available and falls back to
+	// the pure Python python-markdown engine. Use "pandoc" or "python" to
+	// force one of them.
+	"engine": "auto",
+
 	// Path to the pandoc executable. Leave empty to search PATH and
 	// common install locations automatically.
 	"pandoc_path": "",

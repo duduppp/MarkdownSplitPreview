@@ -1,8 +1,10 @@
 # MarkdownSplitPreview
 
-Thanks for installing MarkdownSplitPreview.
+Thanks for installing MarkdownSplitPreview. It works out of the box — the
+pure Python rendering engine is installed automatically as a dependency.
 
-This package renders Markdown with **pandoc**, which must be installed separately:
+**Optional:** install [pandoc](https://pandoc.org/installing.html) for better
+table and code block rendering inside the editor.
 
 ```bash
 brew install pandoc        # macOS
