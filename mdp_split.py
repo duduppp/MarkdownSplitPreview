@@ -11,7 +11,7 @@ import traceback
 import sublime
 import sublime_plugin
 
-from .mdp_common import log, render_for_minihtml, setting
+from .mdp.common import log, render_for_minihtml, setting
 
 PREVIEW_NAME = setting("preview_name", "Markdown Preview")
 PHANTOM_KEY = "mdp_preview_block"

@@ -26,6 +26,15 @@ def _log_path():
     return os.path.join(sublime.cache_path(), PACKAGE + ".log")
 
 
+def hidden_kwargs():
+    """Keep console windows hidden when spawning processes on Windows."""
+    if sublime.platform() == "windows":
+        info = subprocess.STARTUPINFO()
+        info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        return {"startupinfo": info, "creationflags": 0x08000000}
+    return {}
+
+
 def log(msg):
     try:
         path = _log_path()
@@ -112,6 +121,7 @@ def _run_pandoc(view, to):
         encoding="utf-8",
         errors="replace",
         timeout=60,
+        **hidden_kwargs(),
     )
     if proc.returncode != 0:
         raise RuntimeError((proc.stderr or "pandoc failed").strip()[:400])
@@ -301,6 +311,7 @@ def render_standalone(view):
             encoding="utf-8",
             errors="replace",
             timeout=120,
+            **hidden_kwargs(),
         )
         if proc.returncode != 0 or not os.path.exists(out):
             raise RuntimeError((proc.stderr or "pandoc failed").strip()[:400])

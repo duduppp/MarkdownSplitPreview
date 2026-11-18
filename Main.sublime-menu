@@ -33,20 +33,25 @@
 				"caption": "Package Settings",
 				"children": [
 					{
-						"caption": "Settings",
-						"command": "edit_settings",
-						"args": {
-							"base_file": "${packages}/MarkdownSplitPreview/MarkdownSplitPreview.sublime-settings",
-							"default": "// Settings in here override those in \"Default/MarkdownSplitPreview.sublime-settings\"\n{\n\t$0\n}\n"
-						}
-					},
-					{
-						"caption": "Key Bindings",
-						"command": "edit_settings",
-						"args": {
-							"base_file": "${packages}/User/Default ($platform).sublime-keymap",
-							"default": "// Suggested bindings for MarkdownSplitPreview\n[\n\t$0\n]\n"
-						}
+						"caption": "MarkdownSplitPreview",
+						"children": [
+							{
+								"caption": "Settings",
+								"command": "edit_settings",
+								"args": {
+									"base_file": "${packages}/MarkdownSplitPreview/MarkdownSplitPreview.sublime-settings",
+									"default": "// Settings in here override those in \"Default/MarkdownSplitPreview.sublime-settings\"\n{\n\t$0\n}\n"
+								}
+							},
+							{
+								"caption": "Key Bindings",
+								"command": "edit_settings",
+								"args": {
+									"base_file": "${packages}/User/Default ($platform).sublime-keymap",
+									"default": "// Suggested bindings for MarkdownSplitPreview\n[\n\t$0\n]\n"
+								}
+							}
+						]
 					}
 				]
 			}
