@@ -1,14 +1,13 @@
 """Browser preview and quick formatting tools."""
 
 import datetime
-import os
-import subprocess
 import traceback
+import webbrowser
 
 import sublime
 import sublime_plugin
 
-from .mdp.common import hidden_kwargs, log, render_standalone
+from .mdp.common import log, render_standalone
 
 TABLE_SNIPPET = (
     "| Column 1 | Column 2 | Column 3 |\n"
@@ -23,13 +22,7 @@ class MdpBrowserPreviewCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         try:
             out = render_standalone(self.view)
-            platform = sublime.platform()
-            if platform == "osx":
-                subprocess.Popen(["open", out])
-            elif platform == "windows":
-                os.startfile(out)  # noqa: S606
-            else:
-                subprocess.Popen(["xdg-open", out], **hidden_kwargs())
+            webbrowser.open("file://" + out)
             sublime.status_message("Preview written: " + out)
         except Exception:
             log("browser preview failed:\n" + traceback.format_exc())
